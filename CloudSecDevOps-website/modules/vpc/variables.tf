@@ -1,0 +1,11 @@
+variable "region" {}
+variable "project_name" {}
+variable "prod-vpc_cidir" {}
+variable "Prod-NAT-ALB-Sbn_az1_cidir" {}
+variable "Prod-NAT-ALB-Sbn_az2_cidir" {}
+variable "Prod-webserver-Sbn_az1_cidir" {}
+variable "Prod-webserver-Sbn_az2_cidir" {}
+variable "Prod-Appserver-Sbn_az1_cidir" {}
+variable "Prod-Appserver-Sbn_az2_cidir" {}
+variable "Prod-databbase-Sbn_az1_cidir" {}
+variable "Prod-databbase-Sbn_az2_cidir" {}
