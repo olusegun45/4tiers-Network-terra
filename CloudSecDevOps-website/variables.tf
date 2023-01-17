@@ -11,3 +11,6 @@ variable "Prod-databbase-Sbn_az1_cidir" {}
 variable "Prod-databbase-Sbn_az2_cidir" {}
 variable "domain_name" {}
 variable "alternative_name" {}
+variable "max_size" {}
+variable "min_size" {}
+variable "desired_capacity" {}

@@ -63,5 +63,21 @@ module "Application_load_balancer" {
   certificate_arn                           = module.acm.certificate_arn
 }
 
+# create asg
+module "asg" {
+  source                                    = "../modules/asg"
+  project_name = module.vpc.project_name
+  Prod-webserver-Sbn_az1_id = module.vpc.Prod-webserver-Sbn_az1_id
+  Prod-webserver-Sbn_az2_id = module.vpc.Prod-webserver-Sbn_az2_id
+  Prod-Appserver-Sbn_az1_id = module.vpc.Prod-Appserver-Sbn_az1_id
+  Prod-Appserver-Sbn_az2_id = module.vpc.Prod-Appserver-Sbn_az2_id
+  Prod-databbase-Sbn_az1_id = module.vpc.Prod-databbase-Sbn_az1_id
+  Prod-databbase-Sbn_az2_id = module.vpc.Prod-databbase-Sbn_az2_id
+  frontend-alb_target_group_arn = module.Application_load_balancer.frontend-alb_target_group_arn
+  max_size = var.max_size
+  min_size = var.min_size
+  desired_capacity = var.desired_capacity
+}
+
 
 
