@@ -1,6 +1,6 @@
 # 👨🏼‍💻 Deploying a 4 Tier H.A Web Application on AWS 👨🏼‍💻
 
-![image](https://github.com/olusegun45/aws-real-world-projects/blob/main/project-architecture.png?raw=true)
+![image](https://github.com/olusegun45/4tiers-Network-terra/blob/main/AWS%20Net%20diagram%2010-17-21.jpeg?raw=true)
 
 ## STEP 1: Create The Base Networking Infrastructure For NAT/ELB, Webservers, Appservers and Database
 ### A) Create The VPC Network
