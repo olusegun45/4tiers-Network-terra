@@ -1,7 +1,10 @@
 variable "project_name" {}
 variable "max_size" {}
 variable "min_size" {}
+variable "key_name" {}
 variable "desired_capacity" {}
+variable "Prod-NAT-ALB-Sbn_az1_id" {}
+variable "bastionHost_security_group_id" {}
 variable "Prod-webserver-Sbn_az1_id" {}
 variable "Prod-webserver-Sbn_az2_id" {}
 variable "Prod-Appserver-Sbn_az1_id" {}

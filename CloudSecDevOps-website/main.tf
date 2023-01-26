@@ -67,6 +67,8 @@ module "Application_load_balancer" {
 module "asg" {
   source                                    = "../modules/asg"
   project_name = module.vpc.project_name
+  Prod-NAT-ALB-Sbn_az1_id = module.vpc.Prod-NAT-ALB-Sbn_az1_id
+  bastionHost_security_group_id = module.security_group.bastionHost_security_group_id
   Prod-webserver-Sbn_az1_id = module.vpc.Prod-webserver-Sbn_az1_id
   Prod-webserver-Sbn_az2_id = module.vpc.Prod-webserver-Sbn_az2_id
   Prod-Appserver-Sbn_az1_id = module.vpc.Prod-Appserver-Sbn_az1_id
@@ -76,6 +78,7 @@ module "asg" {
   frontend-alb_target_group_arn = module.Application_load_balancer.frontend-alb_target_group_arn
   max_size = var.max_size
   min_size = var.min_size
+  key_name = var.key_name
   desired_capacity = var.desired_capacity
 }
 
