@@ -54,6 +54,7 @@ resource "aws_launch_configuration" "Cloudsecdevops-launch-config" {
     name    = "${var.project_name}-launch-config"
     image_id = "ami-0a606d8395a538502"
     instance_type = "t2.micro"
+    user_data = filebase64("install_apache.sh")
     key_name = var.key_name
 }
 
